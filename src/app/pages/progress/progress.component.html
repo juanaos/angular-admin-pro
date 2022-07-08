@@ -1,1 +1,112 @@
-<p>progress works!</p>
+
+<div class="row">
+
+    <div class="col-9">
+        <div class="card">
+            <div class="card-body">
+
+
+                    <h4 class="card-title">Striped Progress bar 1</h4>
+                    <div class="progress m-t-20">
+                        <div class="progress-bar bg-info progress-bar-striped active" 
+                             aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" 
+                             style="height:10px;"
+                             [style.width]="getProgreso1"
+                             role="progressbar">
+                        </div>
+                    </div>
+              
+            </div>
+        </div>
+    </div>
+
+    <div class="col-3">
+        <div class="card">
+            <div class="card-body">
+
+                    <app-incrementador [btnClass]="'btn btn-info'" (valorSalida)="progreso1 = $event" [progreso]="progreso1"></app-incrementador>
+              
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="row">
+
+    <div class="col-9">
+        <div class="card">
+            <div class="card-body">
+
+
+                    <h4 class="card-title">Striped Progress bar 2</h4>
+                    <div class="progress m-t-20">
+                        <div class="progress-bar bg-primary progress-bar-striped active" 
+                             aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" 
+                             style="height:10px;"
+                             [style.width]="getProgreso2"
+                             role="progressbar">
+                        </div>
+                    </div>
+              
+            </div>
+        </div>
+    </div>
+
+    <div class="col-3">
+        <div class="card">
+            <div class="card-body"> 
+
+                    <app-incrementador [btnClass]="'btn btn-primary'" (valorSalida)="progreso2 = $event" [progreso]="progreso2"></app-incrementador>
+              
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- <input type="number"
+class="form-control"
+[ngClass]="{ 'is-invalid': progreso > 100 || progreso < 0 }"
+placeholder="Product name"
+(ngModelChange)="onChange($event)"
+[(ngModel)]="progreso"> -->
+
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                
+                <input type="text">
+                
+            </div>
+        </div>
+    </div>
+    <div class="col-6">
+        <div class="card">
+            <div class="card-body">
+                <h3>Column 1</h3>
+                <ul>
+                    <li>xxx</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-6">
+        <div class="card">
+            <div class="card-body">
+                <h3>Column 2</h3>
+                <ul>
+                    <li>aaa</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div>
+    <span>Column</span>
+    <pre>{{ miFormulario.value | json }}</pre>
+    <span>Value</span>
+    <pre>{{ miFormulario.controls['valor'] | json }}</pre>
+</div>
