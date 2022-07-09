@@ -7,11 +7,14 @@ import { RouterModule } from '@angular/router';
 import { ComponentsModule } from '../components/components.module';
 import { SharedModule } from '../shared/shared.module';
 
+import { PagesRoutingModule } from './pages-routing.module';
+
 // Custom Components
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ProgressComponent } from './progress/progress.component';
 import { Graphisc1Component } from './graphisc1/graphisc1.component';
 import { PagesComponent } from './pages.component';
+import { AccoountSettingsComponent } from './accoount-settings/accoount-settings.component';
 
 
 
@@ -21,6 +24,7 @@ import { PagesComponent } from './pages.component';
     Graphisc1Component,
     PagesComponent,
     ProgressComponent,
+    AccoountSettingsComponent,
   ],
   imports: [
     CommonModule,
@@ -29,12 +33,14 @@ import { PagesComponent } from './pages.component';
     RouterModule,
     ReactiveFormsModule,
     SharedModule,
+	PagesRoutingModule,
   ],
   exports: [
     DashboardComponent,
     Graphisc1Component,
     PagesComponent,
     ProgressComponent,
+	AccoountSettingsComponent,
   ]
 })
 export class PagesModule { }

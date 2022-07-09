@@ -4,6 +4,7 @@ Author: Wrappixel
 Email: niravjoshi87@gmail.com
 File: js
 */
+
 $(function() {
     "use strict";
     $(function() {
